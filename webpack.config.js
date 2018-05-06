@@ -11,8 +11,16 @@ Encore
     // .enableVersioning(Encore.isProduction())
 
     // uncomment to define the assets of the project
-    // .addEntry('js/app', './assets/js/app.js')
-    // .addStyleEntry('css/app', './assets/css/app.scss')
+    .addEntry('js/app', [
+        './node_modules/jquery/dist/jquery.slim.js',
+        './node_modules/popper.js/dist/popper.min.js',
+        './node_modules/bootstrap/dist/js/bootstrap.min.js',
+        './node_modules/holderjs/holder.min.js'
+    ])
+    .addStyleEntry('css/app', [
+        './node_modules/bootstrap/dist/css/bootstrap.min.css',
+        './assets/css/app.css'
+    ])
 
     // uncomment if you use Sass/SCSS files
     // .enableSassLoader()
